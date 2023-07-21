@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/bookmark.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-warning-subtle ">
+    <div class="container">
+        <h1 class=" my-5 mx-auto p-0">Bookmarker</h1>
+        <h2 class="text-center text-danger pt-4">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>Bookmark your favorite sites</span>
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+    </div>
+
+    <div class="container py-5">
+        <label for="siteName" class="mb-2 fw-bolder">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            <span>Site Name</span>
+        </label>
+        <input type="text" id="siteName" class="form-control" onkeyup="validateSiteName(); checkdouble();">
+        
+        <label for="siteURL" class="mt-4 mb-2 fw-bolder">
+            <i class="fa-solid fa-link pe-2"></i>
+            <span>Site URL</span>
+        </label>
+        <input type="text" id="siteURL" class="form-control" onkeyup="validateSiteUrl();">
+        
+        <div class="d-flex mt-4">
+            <div id="inputUpdateButton"></div>
+            <div id="cancelClearButton"class="mx-5"></div>
+            <div id="deleteAllButton" ></div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table text-center lh-lg">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBody"></tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
